@@ -1,5 +1,5 @@
 .join{
     display: flex;
     width: 100%;
-    background-attachment: red;
+    gap: 2px;
 }

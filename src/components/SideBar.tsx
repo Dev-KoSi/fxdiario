@@ -41,7 +41,7 @@ export function SideBar() {
                 </div>
 
                 <div className="fav">
-                    favourite
+                    Favourite
                 </div>
 
                 <div className="add-log">

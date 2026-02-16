@@ -11,6 +11,16 @@
     width: 15%;
 }
 
+.header .go-up svg{
+    position: fixed;
+    bottom: 50px;
+    left: 5px;
+    background-color: #80D8FF;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 99;
+}
+
 /* #F0F8FF  (Alice Blue – very pale)
 #E6F7FF
 #D6F0FF

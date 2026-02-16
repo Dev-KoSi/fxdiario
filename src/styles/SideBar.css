@@ -28,8 +28,8 @@
     padding-right: 80px;
 }
 
-.sidebar .profile .name{
-    font-size: 18px;
+.sidebar .profile .email{
+    font-size: 14px;
 }
 
 .sidebar .profile .theme svg{
@@ -48,10 +48,10 @@
     margin-bottom: 30px;
     padding-bottom: 5px;
     border-bottom: 1px solid black;
+    font-size: 14px;
 }
 
 .sidebar .account{
-    font-size: 18px;
     margin-bottom: 10px;
     padding: 5px;
     transition: 0.3s ease-in-out;
@@ -59,7 +59,6 @@
 }
 
 .sidebar .fav{
-    font-size: 18px;
     margin-bottom: 10px;
     padding: 5px;
     transition: 0.3s ease-in-out;
@@ -67,7 +66,6 @@
 }
 
 .sidebar .add-log{
-    font-size: 18px;
     margin-bottom: 10px;
     padding: 5px;
     transition: 0.3s ease-in-out;
@@ -82,7 +80,6 @@
 
 .sidebar .logout{
     bottom: 30px;
-    font-size: 18px;
     margin-bottom: 10px;
     padding: 5px;
     transition: 0.3s ease-in-out;

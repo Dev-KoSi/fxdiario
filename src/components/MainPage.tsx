@@ -6,7 +6,7 @@ import { HomePage } from "../pages/HomePage";
 export function MainPage() {
 
     return (
-        <div>
+        <div className="mainpage">
             <Header/>
             <HomePage/>
         </div>

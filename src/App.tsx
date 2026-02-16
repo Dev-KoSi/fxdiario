@@ -1,6 +1,5 @@
 import './App.css'
-import { MainPage } from './components/MainPage';
-import { SideBar } from './components/SideBar';
+import { Log } from './pages/Log';
 
 export function App() {
   console.log('f-safe');
@@ -8,8 +7,7 @@ export function App() {
   
   return (
     <div className='app'>
-      <MainPage/>
-      <SideBar/>
+      <Log/>
     </div>
   )
 }

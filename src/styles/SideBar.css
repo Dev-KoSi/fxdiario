@@ -1,15 +1,14 @@
 .sidebar{
-    position: fixed;
-    right: 0;
     background-color: #80D8FF;
     height: 100vh;
-    padding: 10px 10px 10px 20px;
+    padding: 0px 10px 0px 20px;
 }
 
 .sidebar .profile{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .sidebar .profile .pic{
@@ -82,7 +81,6 @@
 }
 
 .sidebar .logout{
-    position: absolute;
     bottom: 30px;
     font-size: 18px;
     margin-bottom: 10px;

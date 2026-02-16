@@ -1,14 +1,14 @@
 .header{
     padding: 5px;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    background-color: white;
+    z-index: 99;
     border-bottom: 1px solid #80D8FF;
 }
 
 .header .logo{
-    width: 10%;
+    width: 15%;
 }
 
 /* #F0F8FF  (Alice Blue – very pale)

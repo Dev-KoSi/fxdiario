@@ -1,0 +1,51 @@
+.homepage{
+    margin: 10px 0 0 5px;
+}
+
+.homepage .find{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 0 5px;
+}
+
+.homepage .find ::placeholder{
+    font-size: 16px;
+}
+
+.homepage .find .search{
+    border: 1px solid black;
+    padding: 10px;
+    width: 68%;
+    font-size: 16px;
+    outline: none;
+}
+
+.homepage .find .search:focus{
+    box-shadow: 0 0 5px #80D8FF;
+    border: 1px solid #80D8FF;
+}
+
+.homepage .find .date{
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 10px;
+    width: 30%;
+    font-size: 16px;
+}
+
+.homepage .post{
+    margin: 50px;
+}
+
+.homepage .post .details{
+    display: flex;
+}
+
+.homepage .post .asr-date{
+    display: flex;
+}
+
+.homepage .asr{
+
+}

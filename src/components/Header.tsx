@@ -3,7 +3,7 @@ import '../styles/Header.css'
 export function Header() {
 
     return(
-        <div>
+        <>
             <div id='find'></div>
             <header className='header'>
                 <div className="logo">
@@ -17,6 +17,6 @@ export function Header() {
                     </svg></a>
                 </section>
             </header>
-        </div>
+        </>
     )
 }

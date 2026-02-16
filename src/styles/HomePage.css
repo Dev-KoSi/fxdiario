@@ -40,12 +40,61 @@
 
 .homepage .post .details{
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .homepage .post .asr-date{
     display: flex;
+    align-items: baseline;
+    width: 100%;
+    gap: 5px;
 }
 
-.homepage .asr{
+.homepage .post .asr{
+    font-weight: bold;
+    font-size: 20px;
+}
 
+.homepage .post svg{
+    margin-left: 5px;
+    padding: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.homepage .post .fav svg:hover{
+    color: red;
+    stroke: red;
+}
+
+.homepage .post .edit svg:hover{
+    color: #80D8FF;
+    stroke: #80D8FF;
+}
+
+.homepage .post .delete svg:hover{
+    color: gray;
+}
+
+.homepage .post .caption .text{
+    font-size: 18px;
+}
+
+.homepage .post .caption #text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.homepage .post .caption .more{
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.homepage .post img{
+    margin-top: 20px;
 }

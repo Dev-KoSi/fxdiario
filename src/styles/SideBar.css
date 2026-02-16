@@ -1,0 +1,88 @@
+.sidebar{
+    position: fixed;
+    right: 0;
+    background-color: #80D8FF;
+    height: 100vh;
+    padding: 10px 10px 10px 20px;
+}
+
+.sidebar .profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile .pic{
+    font-weight: bold;
+    font-size: 30px;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.sidebar .profile .name-email{
+    padding-right: 80px;
+}
+
+.sidebar .profile .name{
+    font-size: 18px;
+}
+
+.sidebar .profile .theme svg{
+    padding: 7px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar .profile .theme svg:hover{
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.sidebar .bio{
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.sidebar .account{
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sidebar .fav{
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sidebar .account:hover, .sidebar .fav:hover{
+    background-color: white;
+}
+
+.sidebar .logout{
+    position: absolute;
+    bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar .logout:hover{
+    background-color: white;
+    color: red;
+}

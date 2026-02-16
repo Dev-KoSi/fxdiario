@@ -37,12 +37,12 @@
     padding: 7px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
+    background-color: white;
 }
 
 .sidebar .profile .theme svg:hover{
-    background-color: white;
-    padding: 7px;
-    border-radius: 50%;
+    color: lightgray;
+    stroke: lightgray;
 }
 
 .sidebar .bio{

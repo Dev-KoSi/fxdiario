@@ -1,0 +1,25 @@
+.header{
+    background-color: red;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header .logo{
+    width: 10%;
+    /* border-bottom: 55px solid #80D8FF; */
+}
+
+/* #F0F8FF  (Alice Blue – very pale)
+#E6F7FF
+#D6F0FF
+#CCEFFF
+#B3E5FC
+#A7D8FF
+#99CCFF
+#87CEFA  (Light Sky Blue)
+#80D8FF
+#66B2FF
+ */

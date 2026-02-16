@@ -1,5 +1,6 @@
 .homepage{
     margin: 10px 0 0 5px;
+    height: 100vh;
 }
 
 .homepage .find{
@@ -34,8 +35,22 @@
     font-size: 16px;
 }
 
+.homepage .go-up svg{
+    position: fixed;
+    bottom: 50px;
+    left: 5px;
+    background-color: #80D8FF;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.homepage .posts{
+    padding-bottom: 50px;
+}
+
 .homepage .post{
-    margin: 50px;
+    margin: 70px 50px 0 50px;
 }
 
 .homepage .post .details{
@@ -46,14 +61,14 @@
 
 .homepage .post .asr-date{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     width: 100%;
-    gap: 5px;
 }
 
 .homepage .post .asr{
     font-weight: bold;
     font-size: 20px;
+    margin-right: 5px;
 }
 
 .homepage .post svg{

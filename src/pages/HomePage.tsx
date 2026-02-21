@@ -1,9 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/HomePage.css'
+import { useNavigate } from 'react-router-dom';
 
 export function HomePage() {
-
     const [more, setMore] = useState<Boolean>(false);
+    const [token, setToken] = useState(() => localStorage.getItem('token'));
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+
+        if(token === null) {
+            navigate('/login');
+        } else {
+            navigate('/');
+        }
+    }, []);
+
+    useEffect(() => {
+        const home = async () => {
+            try {
+                const req = await fetch(`https://friendi-be.onrender.com/friendi/home`, {
+                    headers : {
+                        'Authorization' : `Bearer ${token}`
+                    }
+                });
+
+                const res = await req.json();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        home();
+    }, []);
 
     return (
         <div className='homepage'>

@@ -6,6 +6,7 @@ import { Profile } from "../pages/Profile";
 import { Favourite } from "../pages/Favourite";
 import { Addlog } from "../pages/AddLog";
 import { Login } from "../pages/Login";
+import { Signup } from "../pages/Signup";
 
 
 export function MainPage() {
@@ -52,10 +53,10 @@ export function MainPage() {
             )
         },
         {
-            path: '/addlog',
+            path: '/signup',
             element: (
                 <div>
-                    <Addlog/>
+                    <Signup/>
                 </div>
             )
         },

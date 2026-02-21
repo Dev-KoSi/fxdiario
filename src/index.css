@@ -45,3 +45,12 @@ input, textarea{
     border: none;
     outline: none;
 }
+.Link{
+    text-decoration: none;
+    color: #80D8FF;
+    font-weight: bold;
+}
+.Link :hover {
+    text-decoration: underline;
+    color: #4DC6FF;
+}

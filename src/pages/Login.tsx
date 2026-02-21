@@ -1,64 +1,62 @@
 import { useState } from 'react';
 import '../styles/Sign.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginSuccess, setLoginSuccess] = useState(null);
-    const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState('password');
 
     useEffect(() => {
         if(loginSuccess === true) {
-            navigate('/');
+            window.location.href = "/"
 
             setLoginSuccess(null);
         }
     }, [loginSuccess]);
 
-    // const loginFunc = async () => {
-    //     const user = {
-    //         email,
-    //         password
-    //     };
+    const loginFunc = async () => {
+        const user = {
+            email,
+            password
+        };
 
-    //     try {
-    //         const res = await fetch('https://friendi-be.onrender.com/friendi/login', {
-    //             method : 'POST',
-    //             headers : {
-    //                 'Content-Type' : 'application/json'
-    //             },
-    //             body : JSON.stringify(user)
-    //         });
+        try {
+            const res = await fetch('https://fxjournal-be.onrender.com/fxlog/login', {
+                method : 'POST',
+                headers : {
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify(user)
+            });
 
-    //         const result = await res.json();
+            const result = await res.json();
+            console.log(result)
 
-    //         if(result) {
-    //             alert(result.message);
-    //         }
+            if(result) {
+                alert(result.message);
+            }
 
-    //         setLoginSuccess((l) => l = result.success);
+            setLoginSuccess(l => l = result.success);
 
-    //         localStorage.setItem('token', result.accessToken);
+            localStorage.setItem('token', result.accessToken);
 
-    //         localStorage.setItem('useremail', result.email);
+            localStorage.setItem('email', result.email);
 
-    //         localStorage.setItem('user-id', result.userId);
+            localStorage.setItem('user-id', result.userId);
 
-    //         localStorage.setItem('my-id', result.id);
+            localStorage.setItem('username', result.username);
+
+            localStorage.setItem('bio', result.bio);
+
+            localStorage.setItem('loginTime', Date.now().toString());
             
-    //         localStorage.setItem('img-url', result.image.url);
-
-    //         localStorage.setItem('user-details', JSON.stringify(result.details));
-
-    //         localStorage.setItem('loginTime', Date.now().toString());
-            
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <div className='sign-page' style={{width : "fit-content", margin : "0 auto"}}>
@@ -93,7 +91,7 @@ export function Login() {
 
                 <div className="login-btn hover">
                     <button onClick={() => {
-                        // loginFunc();
+                        loginFunc();
                     }}>Log in</button>
                 </div>
 
@@ -101,6 +99,7 @@ export function Login() {
                     Don't have an account? <Link className='Link' to={'/signup'}><span>Create an account.</span></Link>
                 </div>
             </div>
+
             {/* keeping flex in check */}
             <div>
                 <span className='text' style={{opacity: '0'}}>

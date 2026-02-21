@@ -36,9 +36,9 @@ export function SideBar() {
                     Trading with Jesus
                 </div>
 
-                <div className="account">
+                <a href="/account"><div className="account">
                     Account
-                </div>
+                </div></a>
 
                 <div className="fav">
                     Favourite

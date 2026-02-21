@@ -14,3 +14,8 @@ svg{
 ::-webkit-scrollbar-thumb {
     background: #80D8FF;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}

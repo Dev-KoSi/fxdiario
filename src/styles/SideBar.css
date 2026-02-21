@@ -3,6 +3,7 @@
     height: 100vh;
     padding: 0px 10px 0px 20px;
     position: relative;
+    right: 0;
 }
 
 .sidebar .profile{

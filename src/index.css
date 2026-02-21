@@ -19,3 +19,10 @@ a{
     text-decoration: none;
     color: black;
 }
+
+button{
+    border: none;
+    font-family: 'outfit', sans-serif;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}

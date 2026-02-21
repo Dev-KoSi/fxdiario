@@ -7,7 +7,7 @@ export function Header() {
             <div id='find'></div>
             <header className='header'>
                 <div className="logo">
-                    <img style={{width: '100%'}} className="logo-pic" src="/logo.png" alt="" />
+                    <a href="/"><img style={{width: '100%'}} className="logo-pic" src="/logo.png" alt="" /></a>
                 </div>
 
                 <section className='go-up'>

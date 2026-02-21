@@ -2,7 +2,7 @@ import { Header } from "./Header";
 import '../styles/MainPage.css'
 import { HomePage } from "../pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Account } from "../pages/Account";
+import { Profile } from "../pages/Profile";
 
 
 export function MainPage() {
@@ -19,7 +19,7 @@ export function MainPage() {
             path: '/account',
             element: (
                 <div>
-                    <Account/>
+                    <Profile/>
                 </div>
             )
         },{

@@ -5,7 +5,7 @@ export function SideBar() {
     const [theme, setTheme] = useState<Boolean>(false);
 
     return (
-        <>
+        <div>
             <section className='sidebar'>
                 <div className="profile">
                     <div className="pic">K</div>
@@ -56,6 +56,6 @@ export function SideBar() {
                     Log out
                 </div>
             </section>
-        </>
+        </div>
     )
 }

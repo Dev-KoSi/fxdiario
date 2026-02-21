@@ -1,0 +1,91 @@
+.profilepage{
+    margin: 20px;
+    position: relative;
+}
+
+.profilepage .username, .bio{
+    margin-bottom: 5px;
+}
+
+.profilepage .input{
+    width: 100%;
+}
+
+.profilepage .username-input input{
+    outline: none;
+    padding: 5px;
+    border: 1px solid #80D8FF;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profilepage textarea{
+    outline: none;
+    padding: 5px;
+    border: 1px solid #80D8FF;
+    min-width: 100%;
+    max-width: 100px;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.profilepage .save-btn button{
+    background-color: #80D8FF;
+    padding: 5px 20px;
+    font-size: 16px;
+    margin-bottom: 250px;
+}
+
+.profilepage .save-btn button:hover{
+    background-color: #4DC6FF;
+}
+
+.profilepage .del-btn button{
+    background-color: red;
+    padding: 5px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.profilepage .del-btn button:hover{
+    background-color: #CC0000;
+}
+
+.profilepage .del-account-prompt{
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 20px;
+    margin-top: -110px;
+}
+
+.profilepage .del-account-prompt .info{
+    margin-bottom: 10px;
+}
+
+.profilepage .del-account-prompt input{
+    width: 100%;
+    outline: none;
+    border: 1px solid white;
+    border-left: 1px solid red;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.profilepage .del-account-prompt .btn{
+    width: 100%;
+}
+
+.profilepage .del-account-prompt button{
+    background-color: red;
+    padding: 5px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.profilepage .del-account-prompt button:hover{
+    background-color: #CC0000;
+}

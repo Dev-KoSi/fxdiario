@@ -120,6 +120,10 @@ export function Profile() {
                             }}>
                                 Delete account
                             </button>
+                            
+                            <button id='cancel' onClick={() => setDel(d => !d)}>
+                                Cancel
+                            </button>
                         </div>
                     </div>}
 

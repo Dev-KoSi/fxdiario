@@ -83,11 +83,22 @@
     background-color: red;
     padding: 5px 20px;
     font-size: 16px;
+    border: 1px solid red;
     width: 100%;
 }
 
 .profilepage .del-account-prompt button:hover{
     background-color: #CC0000;
+}
+
+.profilepage .del-account-prompt #cancel{
+    margin-top: 5px;
+    background-color: white;
+}
+
+.profilepage .del-account-prompt #cancel:hover{
+    background-color: lightgray;
+    border: 1px solid lightgray;
 }
 
 .profilepage input:focus, .profilepage textarea:focus{

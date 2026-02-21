@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export function HomePage() {
     const [more, setMore] = useState<Boolean>(false);
-    const [token, setToken] = useState(() => localStorage.getItem('token'));
+    const token = localStorage.getItem('token')
     const navigate = useNavigate();
     
     useEffect(() => {
@@ -25,7 +25,7 @@ export function HomePage() {
                     }
                 });
 
-                const res = await req.json();
+                req
             } catch (error) {
                 console.log(error);
             }

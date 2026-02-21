@@ -4,11 +4,11 @@ import '../styles/SideBar.css'
 export function SideBar() {
     const [theme, setTheme] = useState<Boolean>(false);
     const [lockSidebar, setLockSidebar] = useState<Boolean>(false)
-    const [token, setToken] = useState(() => localStorage.getItem('token'));
+    const token = localStorage.getItem('token')
 
-    const [username, setUsername] = useState(localStorage.getItem('username'))
-    const [email, setEmail] = useState(localStorage.getItem('email'))
-    const [bio, setBio] = useState(localStorage.getItem('bio'))
+    const username = localStorage.getItem('username')
+    const email = localStorage.getItem('email')
+    const bio = localStorage.getItem('bio')
 
     console.log(username);
     
@@ -26,7 +26,7 @@ export function SideBar() {
             {lockSidebar && <section className='sidebar'>
                 <div>
                     <div className="profile">
-                        <div className="pic">{username[0].toUpperCase()}</div>
+                        <div className="pic">{username ? username[0].toUpperCase() : "User"}</div>
 
                         <div className="name-email">
                             <div className="name">

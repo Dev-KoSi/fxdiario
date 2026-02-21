@@ -89,3 +89,8 @@
 .profilepage .del-account-prompt button:hover{
     background-color: #CC0000;
 }
+
+.profilepage input:focus, .profilepage textarea:focus{
+    box-shadow: 0 0 5px #80D8FF;
+    border: 1px solid #80D8FF;
+}

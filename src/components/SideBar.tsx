@@ -44,13 +44,13 @@ export function SideBar() {
                     Favourite
                 </div></a>
 
-                <div className="add-log">
+                <a href="/addlog"><div className="add-log">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12.001 5.00003V19.002" />
                         <path d="M19.002 12.002L4.99998 12.002" />
                     </svg>
                     Add
-                </div>
+                </div></a>
 
                 <div className="logout">
                     Log out

@@ -26,3 +26,22 @@ button{
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
+
+input, textarea{
+    outline: none;
+}
+.hover :hover{
+    background-color: #4DC6FF;
+}
+.bb{
+    width: 300px;
+    text-align: left;
+    border-bottom: 1px solid #80D8FF;
+}
+.bb input{
+    width: 300px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+}

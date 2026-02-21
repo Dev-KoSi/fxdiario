@@ -1,0 +1,26 @@
+.addlog{
+    margin: 20px;
+}
+
+.addlog .add-shot, .addlog .caption{
+    margin-bottom: 5px;
+}
+
+.addlog .file input{
+    border: 1px solid #80D8FF;
+    margin-bottom: 20px;
+}
+
+.addlog input:focus, .addlog textarea:focus{
+    box-shadow: 0 0 5px #80D8FF;
+    border: 1px solid #80D8FF;
+}
+
+.addlog textarea{
+    padding: 5px;
+    border: 1px solid #80D8FF;
+    min-width: 100%;
+    max-width: 100px;
+    margin-bottom: 20px;
+    min-height: 100px;
+}

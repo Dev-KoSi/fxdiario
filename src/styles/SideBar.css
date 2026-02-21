@@ -6,14 +6,14 @@
     right: 0;
 }
 
-.sidebar .profile{
+.sidebar .user-profile{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     padding-top: 10px;
 }
 
-.sidebar .profile .pic{
+.sidebar .user-profile .pic{
     font-weight: bold;
     font-size: 30px;
     border: 1px solid black;
@@ -26,22 +26,22 @@
     margin-right: 5px;
 }
 
-.sidebar .profile .name-email{
+.sidebar .user-profile .name-email{
     padding-right: 80px;
 }
 
-.sidebar .profile .email{
+.sidebar .user-profile .email{
     font-size: 14px;
 }
 
-.sidebar .profile .theme svg{
+.sidebar .user-profile .theme svg{
     padding: 7px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     background-color: white;
 }
 
-.sidebar .profile .theme svg:hover{
+.sidebar .user-profile .theme svg:hover{
     color: lightgray;
     stroke: lightgray;
 }

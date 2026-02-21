@@ -26,7 +26,7 @@ export function SideBar() {
         <div>
             {lockSidebar && <section className='sidebar'>
                 <div>
-                    <div className="profile">
+                    <div className="user-profile">
                         <div className="pic">{username ? username[0].toUpperCase() : "User"}</div>
 
                         <div className="name-email">

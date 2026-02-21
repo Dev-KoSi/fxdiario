@@ -11,8 +11,6 @@ export function HomePage() {
 
         if(token === null) {
             navigate('/login');
-        } else {
-            navigate('/');
         }
     }, []);
 

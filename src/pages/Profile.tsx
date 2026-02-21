@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/Profile.css'
+import { useNavigate } from 'react-router-dom'
 export function Profile() {
     const username = localStorage.getItem('username') || ""
     const bio = localStorage.getItem('bio') || ""
@@ -9,7 +10,14 @@ export function Profile() {
     const [del, setDel] = useState<Boolean>(false)
     const userId = localStorage.getItem('user-id');
     const token = localStorage.getItem('token');
+    const navigate = useNavigate();
+    
+    useEffect(() => {
 
+        if(token === null) {
+            navigate('/login');
+        }
+    }, []); 
 
     const updateProfile = async () => {
         const newProfile = {
@@ -44,6 +52,31 @@ export function Profile() {
         window.location.reload()
     }
 
+    const deleteAccount = async () => {
+        try {
+            const req = await fetch(`https://fxjournal-be.onrender.com/fxlog/del/user/${userId}`, {
+                method: 'DELETE',
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization : `Bearer ${token}`
+                }
+            })
+
+            const res = await req.json();
+
+            if(res) {
+                localStorage.clear()
+                alert(res.message)
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+
+        window.location.reload()
+        
+    }
+
     return (
         <div>
             <section className="profilepage">
@@ -72,7 +105,7 @@ export function Profile() {
 
                     {del && <div className="del-account-prompt">
                         <div className="info">
-                            Type <span style={{fontWeight: 'bold'}}>"Username"</span> to confirm deletion.
+                            Type <span style={{fontWeight: 'bold'}}>"{username}"</span> to confirm deletion.
                         </div>
 
                         <div>
@@ -80,7 +113,11 @@ export function Profile() {
                         </div>
                         
                         <div>
-                            <button className='btn' onClick={() => setDel(d => !d)}>
+                            <button className='btn' onClick={() => {
+                                if(delprompt === username) {
+                                    deleteAccount()
+                                }
+                            }}>
                                 Delete account
                             </button>
                         </div>

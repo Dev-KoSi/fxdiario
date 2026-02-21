@@ -66,6 +66,11 @@
     transition: 0.3s ease-in-out;
 }
 
+.homepage .post #fav{
+    stroke: red;
+    fill: red;
+}
+
 .homepage .post .fav svg:hover{
     color: red;
     stroke: red;

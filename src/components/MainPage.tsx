@@ -3,6 +3,7 @@ import '../styles/MainPage.css'
 import { HomePage } from "../pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Profile } from "../pages/Profile";
+import { Favourite } from "../pages/Favourite";
 
 
 export function MainPage() {
@@ -23,10 +24,10 @@ export function MainPage() {
                 </div>
             )
         },{
-            path: '/',
+            path: '/favourite',
             element: (
                 <div>
-                    <HomePage/>
+                    <Favourite/>
                 </div>
             )
         },

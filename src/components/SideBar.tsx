@@ -6,19 +6,20 @@ export function SideBar() {
     const [lockSidebar, setLockSidebar] = useState<Boolean>(false)
     const token = localStorage.getItem('token')
 
-    const username = localStorage.getItem('username')
-    const email = localStorage.getItem('email')
-    const bio = localStorage.getItem('bio')
-
-    console.log(username);
-    
+    const [username, setUsername] = useState<string>('')
+    const [bio, setBio] = useState<string>('')
+    const [email, setEmail] = useState<string>('')    
 
     useEffect(() => {
         if(token === null) {
-            setLockSidebar(l => l = false)
+            setLockSidebar(() => false)
         } else {
-            setLockSidebar(l => l = true)
+            setLockSidebar(() => true)
         }
+
+        setUsername(() => localStorage.getItem('username') ?? "")
+        setBio(() => localStorage.getItem('bio') ?? "")
+        setEmail(() => localStorage.getItem('email') ?? "")
     })
 
     return (
@@ -54,8 +55,8 @@ export function SideBar() {
                         {bio}
                     </div>
 
-                    <a href="/account"><div className="account">
-                        Account
+                    <a href="/profile"><div className="profile">
+                        Profile
                     </div></a>
 
                     <a href="/favourite"><div className="fav">
@@ -72,7 +73,7 @@ export function SideBar() {
 
                     <div className="logout" onClick={() => {
                         localStorage.clear()
-                        window.location.reload()
+                        window.location.href = "/login"
                     }}>
                         Log out
                     </div>

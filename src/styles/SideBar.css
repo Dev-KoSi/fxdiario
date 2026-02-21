@@ -53,7 +53,7 @@
     font-size: 14px;
 }
 
-.sidebar .account{
+.sidebar .profile{
     margin-bottom: 10px;
     padding: 5px;
     transition: 0.3s ease-in-out;
@@ -76,7 +76,7 @@
     display: flex;
 }
 
-.sidebar .account:hover, .sidebar .fav:hover, .sidebar .add-log:hover{
+.sidebar .profile:hover, .sidebar .fav:hover, .sidebar .add-log:hover{
     background-color: white;
 }
 

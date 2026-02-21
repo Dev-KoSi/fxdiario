@@ -19,7 +19,7 @@ export function HomePage() {
     useEffect(() => {
         const home = async () => {
             try {
-                const req = await fetch(`https://friendi-be.onrender.com/friendi/home`, {
+                const req = await fetch(`https://fxjournal-be.onrender.com/fxlog/home`, {
                     headers : {
                         'Authorization' : `Bearer ${token}`
                     }

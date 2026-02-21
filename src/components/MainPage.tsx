@@ -21,7 +21,7 @@ export function MainPage() {
             )
         },
         {
-            path: '/account',
+            path: '/profile',
             element: (
                 <div>
                     <Profile/>

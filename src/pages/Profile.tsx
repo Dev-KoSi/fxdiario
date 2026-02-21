@@ -1,10 +1,48 @@
 import { useState } from 'react'
 import '../styles/Profile.css'
 export function Profile() {
-    const [username, setUsername] = useState<string>('Kojo')
-    const [bio, setBio] = useState<string>('I love trading')
+    const username = localStorage.getItem('username') || ""
+    const bio = localStorage.getItem('bio') || ""
+    const [newUsername, setNewUsername] = useState<string>(username)
+    const [newBio, setNewBio] = useState<string>(bio)
     const [delprompt, setDelprompt] = useState<string>('')
     const [del, setDel] = useState<Boolean>(false)
+    const userId = localStorage.getItem('user-id');
+    const token = localStorage.getItem('token');
+
+
+    const updateProfile = async () => {
+        const newProfile = {
+            newUsername,
+            newBio
+        }
+
+        try {
+            const req = await fetch(`https://fxjournal-be.onrender.com/fxlog/update/profile/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization : `Bearer ${token}`
+                },
+                body: JSON.stringify(newProfile)
+            })
+
+            const res = await req.json();
+
+            if(res) {
+                alert(res.message);
+            }
+
+            localStorage.setItem('username', res.newProfile.username);
+
+            localStorage.setItem('bio', res.newProfile.bio);
+
+        } catch (error) {
+            console.log(error)
+        }
+
+        window.location.reload()
+    }
 
     return (
         <div>
@@ -15,7 +53,7 @@ export function Profile() {
                     </div>
 
                     <div className="username-input">
-                        <input type='text' value={username} onChange={(e) => setUsername(e.target.value)}/>
+                        <input type='text' value={newUsername} onChange={(e) => setNewUsername(e.target.value)}/>
                     </div>
 
                     <div className="bio">
@@ -23,11 +61,11 @@ export function Profile() {
                     </div>
 
                     <div className="textarea">
-                        <textarea value={bio} onChange={(e) => setBio(e.target.value)}></textarea>
+                        <textarea value={newBio} onChange={(e) => setNewBio(e.target.value)}></textarea>
                     </div>
 
                     <div className='save-btn'>
-                        <button>
+                        <button onClick={() => updateProfile()}>
                             Save
                         </button>
                     </div>
